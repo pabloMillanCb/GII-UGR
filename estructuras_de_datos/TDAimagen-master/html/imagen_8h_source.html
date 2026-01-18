@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Editor de imágenes: Fichero Fuente imagen.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Editor de imágenes
+   </div>
+   <div id="projectbrief">Editor para imágenes en formato PGM y PPM.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">imagen.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classImagen.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classImagen.html">Imagen</a> {</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">int</span> nf, nc;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> **img;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> allocate(<span class="keywordtype">int</span> <span class="keyword">const</span> filas, <span class="keyword">const</span> <span class="keywordtype">int</span> columnas);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> deallocate();</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classImagen.html#ab2e649aa7a105155c7bfdb846abf0528">Imagen</a>();</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classImagen.html#ab2e649aa7a105155c7bfdb846abf0528">Imagen</a>(<span class="keyword">const</span> <a class="code" href="classImagen.html">Imagen</a> &amp; J);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classImagen.html#ab2e649aa7a105155c7bfdb846abf0528">Imagen</a>(<span class="keywordtype">int</span> filas, <span class="keywordtype">int</span> cols);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    ~<a class="code" href="classImagen.html">Imagen</a>();</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classImagen.html#a4cb4faa04f5e2913965e43a6a65acfd1">num_filas</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classImagen.html#ac28d55c18064aea2a65e6fcf51d86191">num_columnas</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classImagen.html#abe7e36244d80a6ed5ebf952c557203d3">asigna_pixel</a>(<span class="keywordtype">int</span> fila, <span class="keywordtype">int</span> col, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> valor);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="classImagen.html#a2446e3e204f8fa873903ec7c33138b49">valor_pixel</a>(<span class="keywordtype">int</span> fila, <span class="keywordtype">int</span> col) <span class="keyword">const</span>;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classImagen.html">Imagen</a>&amp; <a class="code" href="classImagen.html#a9cfdf5f496d78247026783b4026458e8">operator=</a>(<span class="keyword">const</span> <a class="code" href="classImagen.html">Imagen</a> &amp;orig);</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div><div class="ttc" id="classImagen_html_ab2e649aa7a105155c7bfdb846abf0528"><div class="ttname"><a href="classImagen.html#ab2e649aa7a105155c7bfdb846abf0528">Imagen::Imagen</a></div><div class="ttdeci">Imagen()</div><div class="ttdoc">Constructor sin argumentos de Imagen. Inicializa el puntero a nullptr y nf = nc = 0...</div><div class="ttdef"><b>Definition:</b> imagen.cpp:4</div></div>
+<div class="ttc" id="classImagen_html"><div class="ttname"><a href="classImagen.html">Imagen</a></div><div class="ttdoc">Clase para el TDA Imagen. </div><div class="ttdef"><b>Definition:</b> imagen.h:7</div></div>
+<div class="ttc" id="classImagen_html_a9cfdf5f496d78247026783b4026458e8"><div class="ttname"><a href="classImagen.html#a9cfdf5f496d78247026783b4026458e8">Imagen::operator=</a></div><div class="ttdeci">Imagen &amp; operator=(const Imagen &amp;orig)</div><div class="ttdoc">Iguala el objeto actual al del otro lado del operando. </div><div class="ttdef"><b>Definition:</b> imagen.cpp:74</div></div>
+<div class="ttc" id="classImagen_html_abe7e36244d80a6ed5ebf952c557203d3"><div class="ttname"><a href="classImagen.html#abe7e36244d80a6ed5ebf952c557203d3">Imagen::asigna_pixel</a></div><div class="ttdeci">void asigna_pixel(int fila, int col, unsigned char valor)</div><div class="ttdoc">Asigna el valor de un pixel de la imagen. </div><div class="ttdef"><b>Definition:</b> imagen.cpp:62</div></div>
+<div class="ttc" id="classImagen_html_a2446e3e204f8fa873903ec7c33138b49"><div class="ttname"><a href="classImagen.html#a2446e3e204f8fa873903ec7c33138b49">Imagen::valor_pixel</a></div><div class="ttdeci">unsigned char valor_pixel(int fila, int col) const</div><div class="ttdoc">Consultor del valor del valor de un pixel de la imagen. </div><div class="ttdef"><b>Definition:</b> imagen.cpp:68</div></div>
+<div class="ttc" id="classImagen_html_ac28d55c18064aea2a65e6fcf51d86191"><div class="ttname"><a href="classImagen.html#ac28d55c18064aea2a65e6fcf51d86191">Imagen::num_columnas</a></div><div class="ttdeci">int num_columnas() const</div><div class="ttdoc">Devuelve el numero de columnas de la imagen. Es constante. </div><div class="ttdef"><b>Definition:</b> imagen.cpp:52</div></div>
+<div class="ttc" id="classImagen_html_a4cb4faa04f5e2913965e43a6a65acfd1"><div class="ttname"><a href="classImagen.html#a4cb4faa04f5e2913965e43a6a65acfd1">Imagen::num_filas</a></div><div class="ttdeci">int num_filas() const</div><div class="ttdoc">Devuelve el numero de filas de la imagen. Es constante. </div><div class="ttdef"><b>Definition:</b> imagen.cpp:57</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
