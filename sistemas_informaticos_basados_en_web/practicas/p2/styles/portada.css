@@ -1,0 +1,136 @@
+    body {
+        font-family: Roboto, Arial;
+    }
+
+    h1 {
+        text-shadow: 3px 3px gray;
+        color: black;
+    }
+
+    .cabecera {
+        font-weight: bold;
+        display: flex; 
+        flex-direction: row;
+        justify-content:left;
+        background-color:skyblue;
+        height: 15%;
+        border-radius: 20px;
+        margin: 5px;
+    }
+
+    .contenido {
+        display: flex; 
+        flex-direction: row;
+        justify-content:left;
+    }
+
+    .lateral {
+        background-color:lightsalmon;
+        width: 100px;
+        flex: 2;
+        margin: 5px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .cuadricula {
+        background-color:wheat;
+        flex: 5;
+        margin: 5px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        border-radius: 20px;
+    }
+
+    .cuadricula a {
+        cursor: pointer;
+        color: black;
+        text-decoration: none;
+    }
+
+    .cuadricula div {
+        text-align: center;
+        margin: 4%;
+        display: flex;
+        flex-direction: column;
+        background-color:lightgrey;
+        border-radius: 20px;
+        overflow: hidden;
+        
+    }
+
+    .cuadricula div img {
+        object-fit: cover;
+        width: 100%;
+        height: 15em;
+        
+    }
+
+    .cuadricula div h3 {
+        margin: 0;
+
+    }
+
+    .pie {
+        background-color:skyblue;
+        border-radius: 30px;
+        text-align: center;  
+        padding: 40px; 
+        margin: 5px;
+    }
+
+    .titulo {
+        font-size: 500%;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .titulo_y_menu {
+        flex: 4;
+    }
+
+    .logo {
+
+        flex: 1;
+        text-align: center;
+    }
+
+    .menu {
+        display: flex; 
+        flex-direction: row;
+        justify-content:flex-start;
+    }
+
+    .menu button {
+        margin-right: 10%;
+        margin-top: 1%;
+        border-radius: 5px;
+        height: 100%;
+        width: 10%;
+        cursor: pointer;
+        box-shadow: none;
+    }
+
+    /*Se eliminan y recolocan algunos elementos como el lateral cuando la pagina baja
+    de cierto umbral*/
+
+    @media only screen and (max-width: 950px) {
+
+        .cabecera{
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .menu {
+            justify-content: space-around;
+        }
+
+        .menu button {
+            margin: 0% 0% 2% 0%;
+        }
+
+        .lateral {
+            display: none;
+        }
+
+    }

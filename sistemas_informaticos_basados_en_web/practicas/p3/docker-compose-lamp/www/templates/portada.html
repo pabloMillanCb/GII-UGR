@@ -1,0 +1,36 @@
+
+{% extends "cabecera_pie.html" %}
+
+
+    {% block title %} <title>100cia Web Official</title> {% endblock %}
+    
+    {% block style %} <link rel="stylesheet" href="./styles/portada.css"> {% endblock %}
+
+
+    {% block menu %}
+    <div class="menu">
+        <button>Menu 1</button>
+        <button>Menu 2</button>
+        <button>Menu 3</button>
+    </div>
+    {% endblock %}
+
+
+    {% block cuerpo %}
+    <!-- Aquí empieza la cuadrícula con todos los cientificos -->
+    <div class="contenido">
+        {% block contenido %}
+        <div class="cuadricula">
+            {% for item in cientificos %}
+            <div class="tarjeta"><a href="./cientifico.php?ct={{ item.id }}"><div><img src="{{ item.foto1 }}" alt=""><h3>{{ item.nombre }}</h3></div></a></div>
+            {% endfor %}
+        </div>
+        {% endblock %}
+        
+        <!-- Aquí empieza el lateral de la pagina -->
+        <div class="lateral">
+            <h2>Elementos Auxiliares</h2>
+        </div>
+    </div>
+    {% endblock %}
+

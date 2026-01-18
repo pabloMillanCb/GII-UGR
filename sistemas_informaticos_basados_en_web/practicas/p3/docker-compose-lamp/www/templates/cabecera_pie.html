@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <meta charset="utf-8">
+
+        {% block titulo %}
+        <title>100cia Web Official</title>
+        {% endblock %}
+
+        {% block style %}
+        <link rel="stylesheet" href="./styles/portada.css">
+        {% endblock %}
+
+        {% block script %}
+
+        {% endblock %}
+
+        {% endblock %}
+    </head>
+    
+    <body>
+
+        {% block cabecera %}
+        <!-- Aquí empieza la cabecera con el logo, título y menú -->
+        <div class="cabecera">
+            <div class="logo">
+                <img src="./img/cara.webp" alt="">
+            </div>
+            <div class="titulo_y_menu">
+                <h1 class="titulo">100cia Web Official</h1>
+                {% block menu %}
+
+                {% endblock %}
+            </div>
+        </div>
+        {% endblock %}
+
+        <!-- Aquí empieza la cuadrícula con todos los cientificos -->
+        {% block cuerpo %}
+
+        {% endblock %}
+
+        <!-- Aquí empieza el pie -->
+        {% block pie %}
+        <div class="pie">
+            <p>Pablo Millán Cubero</p>
+            <p>Mr. Fulano of the Copes & Co.</p>
+        </div>
+        {% endblock %}
+        
+    </body>
+    <style>
+        
+    </style>
+</html>
+

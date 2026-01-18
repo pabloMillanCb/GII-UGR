@@ -1,0 +1,19 @@
+En principio necesito 2 tablas:
+
+CIENTIFICO
+    - id (CP)
+    - nombre
+    - fecha
+    - origen
+    - texto
+    - foto1
+    - foto2
+    - pie1
+    - pie2
+
+COMENTARIO
+    - id (CP)
+    - nombre
+    - correo
+    - fecha
+    - texto

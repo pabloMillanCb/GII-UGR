@@ -1,0 +1,88 @@
+{% extends "portada.html" %}
+        
+
+    {% block title %} <title>Dr. Mario page</title> {% endblock %}
+    
+    {% block style %} <link rel="stylesheet" href="./styles/cientifico.css"> {% endblock %}
+
+    {% block script %} 
+    <script>window.myVar = '{{ id }}'</script>
+    <script src="./js/cientifico.js" defer></script>
+    <script src="./js/jquery.js"></script>
+    {% endblock %}
+
+
+    {% block cabecera %}
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="error-comment"></p>
+        </div>
+
+    </div>
+
+    {{ parent() }}
+
+    {% endblock %}
+
+
+    {% block cuerpo %}
+    <!-- Aquí empieza la cuadrícula con todos los cientificos -->
+    <div class="contenido">
+        {% block contenido %}
+        <div class="cuadricula">
+            <!-- Cabecera con los datos -->
+            <div class="datos">
+                <h2>{{ nombre }}</h2>
+                <h3>{{ fecha }}</h3>
+                <h4>{{ pais }}</h4>
+            </div>
+            <!-- Texto e imagenes -->
+            <div>
+                <div class="fotos">
+                    <div><img src="{{ foto1 }}" alt="Pineapple"> <p>{{ pie1 }}</p></div>
+                    <div><img src="{{ foto2 }}" alt="Pineapple"> <p>{{ pie2 }}</p></div>
+                </div>
+                <p>{{ texto }}</p>
+
+            </div>
+            <!-- Botones de enlace a RRSS e impresión -->
+            <div class="menu-redes">
+                <a href=""><img src="img/twt.png" alt=""></a>
+                <a href=""><img src="img/fb.webp" alt=""></a>
+                <a href="./cientifico_imprimir.php?ct={{ id }}"><img src="img/print.png" alt=""></a>
+                
+            </div>
+        </div>
+        {% endblock %}
+        
+        <!-- Aquí empieza el lateral de la pagina -->
+        
+        {% block lateral %}
+        <div class="lateral">
+            <h3>Elementos Auxiliares</h3>
+        </div>
+        <!-- Aquí empieza la sección de comentarios-->
+        <a><img src="img/comment.png" alt="" id="boton-comentario"></a>
+        <div class="seccion-comentarios" id="seccion-comentarios">
+            {% for item in comentarios %}
+            <div class="comentario">
+                <h2>{{ item.nombre }}</h2>
+                <h3>{{ item.fecha }}</h3>
+                <p>{{ item.texto }}</p>
+            </div>
+            {% endfor %}
+            <div class="formulario">
+                <input type="text" placeholder="Nombre" id="name" ><br>
+                <input type="text" placeholder="Correo" id="mail" ><br>
+                <textarea id="texto-comentario" rows="4" cols="50"></textarea>
+                <button id="enviar-comentario"> Enviar </button>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+    {% endblock %}

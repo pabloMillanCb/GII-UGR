@@ -1,0 +1,113 @@
+    body {
+        font-family: 'Times New Roman';
+    }
+
+    .cabecera {
+        font-weight: bold;
+        display: flex; 
+        height: 15%;
+        border-radius: 20px;
+        margin: 5px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contenido {
+        display: flex; 
+        flex-direction: row;
+        justify-content:left;
+    }
+
+    .lateral {
+        display:none;
+    }
+
+    .cuadricula {
+        flex: 5;
+        margin: 5px;
+        border-radius: 20px;
+        text-align: center;
+        padding: 4%;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .cuadricula p {
+        text-align: left;
+    }
+
+    .datos {
+        text-align: left;
+        margin: 0;
+    }
+
+    .datos h2 {
+        font-size: 50px;
+        margin: 0;
+    }
+
+    .datos h4 {
+        margin: 0;
+    }
+
+    .pie {
+        border-radius: 30px;
+        text-align: center;  
+        padding: 40px; 
+        margin: 5px;
+    }
+
+    .titulo {
+        font-size: 500%;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .cuadricula div h3 {
+        margin: 0;
+    }
+
+    .fotos {
+        display: flex;
+        float: right;
+        flex-direction: column;
+        margin-left: 5%;
+    }
+
+    .fotos img {
+        width: 15em;
+        margin-top: 5%;
+        object-fit: cover;
+        height: 10em;
+        text-align: center;
+        margin-left: 0%;
+    }
+
+    .fotos div {
+        text-align: center;
+    }
+
+    h5 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .menu-redes  {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10% 15% 0% 15%;
+        display: none;
+    }
+
+    .menu-redes a img{
+        width: 3em;
+        height: 3em;
+        border-radius: 8px;
+        background-color: white;
+        cursor: pointer;
+    }

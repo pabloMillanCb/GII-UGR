@@ -1,0 +1,23 @@
+{% extends "cabecera_pie.html" %}
+
+
+    {% block title %} <title>100cia Web Official</title> {% endblock %}
+    
+    {% block style %} <link rel="stylesheet" href="./styles/portada.css"> {% endblock %}
+
+
+    {% block menu %}
+
+    {% endblock %}
+
+
+    {% block cuerpo %}
+    <!-- Aquí empieza la cuadrícula con todos los cientificos -->
+    <div class="contenido">
+        {% block contenido %}
+        <div class="cuadricula">
+            <p class="error_message">ERROR. Esta página no existe.</p>
+        </div>
+        {% endblock %}  
+    </div>
+    {% endblock %}
