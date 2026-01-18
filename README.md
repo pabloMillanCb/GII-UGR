@@ -4,3 +4,7 @@ Proyectos varios de algunas asignaturas de la carrera de informatica en la ugr, 
 - Estructura de Computadores (EC)
 - Programacion Orientada a Objetos (POO)
 - Metodologia de la Programacion (MP)
+- Informatica grafica (IG)
+- Metaheuristicas
+- Sistemas Informaticos Basados en Web (SIBW)
+- Desarrollo Basado en Agentes (DBA, la mejor asignatura, y el mejor profesor Luis <3)
